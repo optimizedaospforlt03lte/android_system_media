@@ -738,6 +738,7 @@ enum {
     AUDIO_DEVICE_OUT_IP                        = 0x800000,
     /* audio bus implemented by the audio system (e.g an MOST stereo channel) */
     AUDIO_DEVICE_OUT_BUS                       = 0x1000000,
+    AUDIO_DEVICE_OUT_PROXY                     = 0x2000000,
     AUDIO_DEVICE_OUT_DEFAULT                   = AUDIO_DEVICE_BIT_DEFAULT,
     AUDIO_DEVICE_OUT_ALL      = (AUDIO_DEVICE_OUT_EARPIECE |
                                  AUDIO_DEVICE_OUT_SPEAKER |
@@ -764,6 +765,7 @@ enum {
                                  AUDIO_DEVICE_OUT_SPEAKER_SAFE |
                                  AUDIO_DEVICE_OUT_IP |
                                  AUDIO_DEVICE_OUT_BUS |
+                                 AUDIO_DEVICE_OUT_PROXY |
                                  AUDIO_DEVICE_OUT_DEFAULT),
     AUDIO_DEVICE_OUT_ALL_A2DP = (AUDIO_DEVICE_OUT_BLUETOOTH_A2DP |
                                  AUDIO_DEVICE_OUT_BLUETOOTH_A2DP_HEADPHONES |
@@ -803,6 +805,7 @@ enum {
     AUDIO_DEVICE_IN_IP                    = AUDIO_DEVICE_BIT_IN | 0x80000,
     /* audio bus implemented by the audio system (e.g an MOST stereo channel) */
     AUDIO_DEVICE_IN_BUS                   = AUDIO_DEVICE_BIT_IN | 0x100000,
+    AUDIO_DEVICE_IN_PROXY                 = AUDIO_DEVICE_BIT_IN | 0x1000000,
     AUDIO_DEVICE_IN_DEFAULT               = AUDIO_DEVICE_BIT_IN | AUDIO_DEVICE_BIT_DEFAULT,
 
     AUDIO_DEVICE_IN_ALL     = (AUDIO_DEVICE_IN_COMMUNICATION |
@@ -826,6 +829,7 @@ enum {
                                AUDIO_DEVICE_IN_LOOPBACK |
                                AUDIO_DEVICE_IN_IP |
                                AUDIO_DEVICE_IN_BUS |
+                               AUDIO_DEVICE_IN_PROXY |
                                AUDIO_DEVICE_IN_DEFAULT),
     AUDIO_DEVICE_IN_ALL_SCO = AUDIO_DEVICE_IN_BLUETOOTH_SCO_HEADSET,
     AUDIO_DEVICE_IN_ALL_USB  = (AUDIO_DEVICE_IN_USB_ACCESSORY |
