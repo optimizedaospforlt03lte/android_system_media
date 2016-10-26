@@ -336,6 +336,7 @@ typedef enum {
     AUDIO_FORMAT_SBC                 = 0x20000000UL,
     AUDIO_FORMAT_APTX                = 0x21000000UL,
     AUDIO_FORMAT_APTX_HD             = 0x22000000UL,
+    AUDIO_FORMAT_AC4                 = 0x0F000000UL, /* AC-4 sync frame transport format*/
 
     AUDIO_FORMAT_MAIN_MASK           = 0xFF000000UL,/* Deprecated. Use audio_get_main_format() */
     AUDIO_FORMAT_SUB_MASK            = 0x00FFFFFFUL,
@@ -1582,6 +1583,7 @@ static inline bool audio_is_valid_format(audio_format_t format)
     case AUDIO_FORMAT_WMA:
     case AUDIO_FORMAT_WMA_PRO:
     case AUDIO_FORMAT_DSD:
+    case AUDIO_FORMAT_AC4:
         return true;
     case AUDIO_FORMAT_PCM_OFFLOAD:
         if (format != AUDIO_FORMAT_PCM_16_BIT_OFFLOAD &&
